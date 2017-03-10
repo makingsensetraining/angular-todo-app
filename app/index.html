@@ -1,10 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="toDoList">
+
 <head>
-  <meta charset="UTF-8">
-  <title>To-Do list app with Angular 1.x</title>
+	<title>TO-DO LIST =)</title>
+	<meta charset="UTF-8">
+	<link href="toDoListStyles.css" rel="stylesheet" />
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+	<script src="toDoList.js"></script>
 </head>
-<body>
-  <h1>To-Do list app with Angular 1.x</h1>
+
+<body ng-controller="ToDoListController as toDoListCtrl">
+
+	<div align="center" class="title-container">
+		<h1>TO-DO LIST</h1>
+	</div>
+	<div class="todolist-container">
+		<div class="todolist" ng-controller="ItemController as itemCtrl">
+			<form class="container"  ng-submit="itemCtrl.addItem(itemCtrl.item)">
+				<input type="text" class="item-description" ng-model="itemCtrl.item.description"/>
+				<input type="submit" value="OK" class="add-button"/>
+			</form>
+			<div class="items-container">
+				<ul class="item">
+					<li ng-repeat="item in toDoListCtrl.items">
+						<div class="description">
+							<span ng-class="{'item-selected':item.done}">{{item.description}}</span>
+						</div>
+						<div class="actions">
+							<input type="checkbox" ng-click="itemCtrl.toggleDone(item);">
+							<button class="delete-button" ng-click="itemCtrl.deleteItem(item);">DEL</button>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
 </body>
 </html>

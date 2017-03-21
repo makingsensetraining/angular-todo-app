@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html ng-app="toDoList">
   <head>
-    <title>TO-DO LIST =)</title>
+    <title>TO-DO List with Angular.JS</title>
     <meta charset="UTF-8">
     <link href="toDoListStyles.css" rel="stylesheet"/>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
     <script src="toDoList.js"></script>
+    <script src="itemsService.js"></script>
   </head>
-  <body ng-controller="ToDoListController as toDoListCtrl">
+  <body>
     <div align="center" class="title-container">
       <h1>TO-DO LIST</h1>
     </div>
@@ -19,7 +20,7 @@
         </form>
         <div class="items-container">
           <ul class="item">
-            <li ng-repeat="item in toDoListCtrl.items">
+            <li ng-repeat="item in itemCtrl.items">
               <div class="description">
                 <span ng-class="{'item-selected':item.done}">{{item.description}}</span>
               </div>

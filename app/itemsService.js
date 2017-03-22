@@ -2,10 +2,10 @@
   var app = angular.module('toDoList');
 
   var items = [];
+  var id = 0;
 
   app.service('itemsApi', function() {
     this.items = items;
-    var id = 0;
 
     this.addItem = function(item) {
       if(item.description) {

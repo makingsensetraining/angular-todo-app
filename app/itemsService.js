@@ -1,8 +1,10 @@
 (function() {
   var app = angular.module('toDoList');
 
+  var items = [];
+
   app.service('itemsApi', function() {
-    this.items = [];
+    this.items = items;
     var id = 0;
 
     this.addItem = function(item) {
@@ -14,10 +16,9 @@
     };
 
     this.deleteItem = function(item) {
-      var items2 = this.items;
-      this.items.forEach(function(element, index) {
+      items.forEach(function(element, index) {
         if(element.id == item.id) {
-          items2.splice(index, 1);
+          items.splice(index, 1);
         }
       });
     };

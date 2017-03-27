@@ -5,8 +5,10 @@
     this.items = itemsApi.items;
     this.item = {};
 
-    this.addItem = function(item) {
-      itemsApi.addItem(item);
+    this.addItem = function(itemDescription) {
+      if(description) {
+        itemsApi.addItem(itemDescription);
+      }
       this.item = {};
     };
 

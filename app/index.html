@@ -16,7 +16,7 @@
     </div>
     <div class="todolist-container">
       <div class="todolist" ng-controller="ItemController as itemCtrl">
-        <form class="container" ng-submit="itemCtrl.addItem(itemCtrl.item)">
+        <form class="container" ng-submit="itemCtrl.addItem(itemCtrl.item.description)">
           <input type="text" class="item-description" ng-model="itemCtrl.item.description"/>
           <input type="submit" value="ADD" class="add-button"/>
         </form>

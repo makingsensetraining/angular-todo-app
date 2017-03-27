@@ -6,10 +6,8 @@
     this.item = {};
 
     this.addItem = function(itemDescription) {
-      if(description) {
-        itemsApi.addItem(itemDescription);
-      }
       this.item = {};
+      if(itemDescription) return itemsApi.addItem(itemDescription);
     };
 
     this.deleteItem = function(item) {

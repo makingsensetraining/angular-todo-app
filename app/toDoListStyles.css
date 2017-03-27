@@ -1,5 +1,5 @@
 body {
-  background-color: #DFDFDF;
+  background-color: #2d2c41;
 }
 
 li {
@@ -22,22 +22,57 @@ ul {
 
 h1 {
   font-size: 72px;
-  line-height: 50px;
+  line-height: 72px;
   font-family: Arial, Helvetica, sans-serif, Geneva, sans-serif;
   font-weight: bold;
-  color: #ffffff;
-  text-shadow: 3px 3px 5px #A64DFF, 6px 6px 5px #FF8000, 9px 9px 5px #6DD900;
+  color: #6b8d7c;
+  -webkit-margin-after:0 !important;
+}
+
+h2 {
+  font-size: 20px;
+  line-height: 30px;
+  font-family: Arial, Helvetica, sans-serif, Geneva, sans-serif;
+  font-weight: normal;
+  color: #d8c19f;
+}
+
+span {
+  font-family: 'Architects Daughter', cursive, Arial, Helvetica, sans-serif, Geneva, sans-serif;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+button {
+    background-color: #c12c42;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
 
 .item-description {
   width: 80%;
   display: inline-block;
   margin-right: 15px;
+  padding: 10px;
+  font-family: 'Architects Daughter', cursive, Arial, Helvetica, sans-serif, Geneva, sans-serif;
+  font-size: 15px;
 }
 
 .add-button {
+  background-color: #d8c19f;
+  border: none;
+  color:#2d2c41;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
   display: inline;
   width: 20%;
+  padding: 10px;
 }
 
 .container {
@@ -52,7 +87,8 @@ h1 {
 }
 
 .description {
-  width: 80%;
+  width: 70%;
+  word-wrap: break-word;
 }
 
 .title-container {
@@ -83,7 +119,8 @@ h1 {
 }
 
 .actions {
-  width: 20%;
+  width: 100px;
+  text-align: right;
 }
 
 .item {
@@ -92,7 +129,7 @@ h1 {
 
 .item-selected {
   text-decoration: line-through;
-  color: red
+  color: #742e46;
 }
 
 .delete-button {

@@ -1,6 +1,6 @@
 # angular-todo-app
 
-To-Do list app with Angular 1.x.
+To-Do list app with Angular 1.x. You can [play live here](https://angular-todo-app-rocks.herokuapp.com/).
 
 ## About
 

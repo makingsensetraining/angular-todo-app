@@ -4,15 +4,24 @@
   var items = [];
   var nextId = 0;
 
-  app.service('itemsApi', function() {
+  app.service('itemsApi', ['$http', function($http) {
+
     this.items = items;
+
+    this.loadItems = function() {
+      $http.get('/items').then(function(response) {
+        response.data.forEach(function(element, index) {
+          items.push(element);
+        });
+      });
+    };
 
     this.addItem = function(itemDescription) {
       var item = {};
       item.itemId = nextId++;
-      item.description = itemDescription;
+      item.itemDescription = itemDescription;
       item.done = false;
-      this.items.push(item);
+      items.push(item);
     };
 
     this.deleteItem = function(item) {
@@ -24,11 +33,11 @@
     };
 
     this.toggleDone = function(item) {
-      this.items.forEach(function(element, index) {
+      items.forEach(function(element, index) {
         if(element.itemId === item.itemId) {
           element.done = !element.done;
         }
       });
     };
-  });
+  }]);
 })();

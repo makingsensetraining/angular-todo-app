@@ -24,7 +24,7 @@
           <ul class="item">
             <li ng-repeat="item in itemCtrl.items">
               <div class="description">
-                <span ng-class="{'item-selected':item.done}">{{item.description}}</span>
+                <span ng-class="{'item-selected':item.done}">{{item.itemDescription}}</span>
               </div>
               <div class="actions">
                 <input type="checkbox" ng-click="itemCtrl.toggleDone(item);">

@@ -32,12 +32,5 @@
       });
     };
 
-    this.toggleDone = function(item) {
-      items.forEach(function(element, index) {
-        if(element.itemId === item.itemId) {
-          element.done = !element.done;
-        }
-      });
-    };
   }]);
 })();

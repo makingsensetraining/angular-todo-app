@@ -27,7 +27,7 @@
                 <span ng-class="{'item-selected':item.done}">{{item.itemDescription}}</span>
               </div>
               <div class="actions">
-                <input type="checkbox" ng-click="itemCtrl.toggleDone(item);">
+                <input type="checkbox" ng-model="item.done">
                 <button class="delete-button" ng-click="itemCtrl.deleteItem(item);">DEL</button>
               </div>
             </li>

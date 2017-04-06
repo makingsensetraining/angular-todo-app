@@ -17,10 +17,6 @@
       itemsApi.deleteItem(item);
     };
 
-    this.toggleDone = function(item) {
-      itemsApi.toggleDone(item);
-    };
-
     itemsApi.loadItems();
 
   }]);
